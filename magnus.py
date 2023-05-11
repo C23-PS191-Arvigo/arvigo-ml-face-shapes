@@ -29,17 +29,13 @@ def classify_face_shape(value):
 
     # Get the highest and second highest probabilities
     highest_probability = probabilities[sorted_probabilities_array[0]]
-    second_highest_probability = probabilities[sorted_probabilities_array[1]]
 
     # Get the corresponding shapes using the sorted probabilities array
     highest_shape = shapes[sorted_probabilities_array[0]]
-    second_highest_shape = shapes[sorted_probabilities_array[1]]
 
     return {
         'shape': highest_shape,
         'probability': highest_probability,
-        'second_shape': second_highest_shape,
-        'second_probability': second_highest_probability
     }
 
 
